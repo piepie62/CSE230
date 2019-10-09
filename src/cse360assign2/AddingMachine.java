@@ -9,12 +9,14 @@ package cse360assign2;
  */
 public class AddingMachine {
     private int total;
+    private String showMe;
     
     /**
      * Initializes the AddingMachine with total 0
      */
     public AddingMachine () {
         total = 0;  // not needed - included for clarity
+        showMe = "0";
     }
     
     /**
@@ -22,23 +24,25 @@ public class AddingMachine {
      * @return The current total
      */
     public int getTotal () {
-        return 0;
+        return total;
     }
     
     /**
-     * Will eventually do something probably
-     * @param value 
+     * Adds the value to the current total
+     * @param value Value to add 
      */
     public void add (int value) {
-    
+        total += value;
+        showMe += " + " + value;
     }
     
     /**
-     * Will eventually do something probably
-     * @param value 
+     * Subtracts the value from the current total
+     * @param value Value to subtract
      */
     public void subtract (int value) {
-    
+        total -= value;
+        showMe += " - " + value;
     }
     
     /**
@@ -46,13 +50,14 @@ public class AddingMachine {
      * @return  
      */
     public String toString () {
-        return "";
+        return showMe;
     }
     
     /**
-     * Will eventually do something probably
+     * Clears the current total
      */
     public void clear() {
-    
+        total = 0;
+        showMe = "0";
     }
 }
